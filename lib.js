@@ -16,11 +16,12 @@ function employee (name, manager) {
 function underlings (manager, employees) {
   let newArray = [];
 
-  for (i = 0; i < employees.length; i++) {
-    if (employees[i].manager === manager) {
-      newArray.push(employees[i].name)
+  employees.forEach( (data) => {
+    if (data.manager === manager) {
+      newArray.push(data.name);
     }
-  }
+  })
+
   return newArray;
 }
 
